@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: payment_service
+  flyway:
+    enabled: true
+    schemas: ateupeonding_payment_flyway
+    user: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/ateupeonding
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/ateupeonding
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/ateupeonding
+    username: postgres
+    password: postgres
+    properties:
+      schema: ateupeonding_payment
+  rabbitmq:
+    host: localhost
+    password: password
+    username: rabbitmq
+
+server:
+  port: 8082
