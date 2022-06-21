@@ -24,5 +24,5 @@ create table if not exists ateupeonding_payment.payment_transactions_history
     created_timestamp timestamp with time zone default now()
 );
 
-create index payment_transactions_history_user_id on ateupeonding_payment.payment_transactions_history(user_id);
-create index payment_transactions_history_product_type_and_product_id on ateupeonding_payment.payment_transactions_history(product_type, product_id);
+create index if not exists payment_transactions_history_user_id on ateupeonding_payment.payment_transactions_history(user_id);
+create index if not exists payment_transactions_history_product_type_and_product_id on ateupeonding_payment.payment_transactions_history(product_type, product_id);
